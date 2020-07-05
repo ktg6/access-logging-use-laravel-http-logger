@@ -17,7 +17,7 @@ app\Http\Middleware\accesslog\LogWriter.php
 ```
 <?php
 
-namespace App\Http\Middleware\AccessLogs;
+namespace App\Http\Middleware\accesslog;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -63,7 +63,7 @@ return [
  */
 // 'log_writer' => \Spatie\HttpLogger\DefaultLogWriter::class,
 // パスをMiddleWareに作ったファイルに変える
-'log_writer' => \Spatie\HttpLogger\accesslog\LogWriter::class,
+'log_writer' => \App\Http\Middleware\AccessLogs\LogWriter::class,
 
 /*
  * Filter out body fields which will never be logged.
